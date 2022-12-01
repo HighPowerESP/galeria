@@ -63,6 +63,10 @@ html {
     font-size: 12px;
   }
   
+  .boton{
+    text-decoration: none;
+  }
+
   .login-box form a {
     position: relative;
     display: inline-block;
