@@ -45,7 +45,10 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     <li>
-                        <a href="#">Contact</a>
+                        <a href="./admin/index.php?page=login">Iniciar sesion</a>
+                    </li>
+                    <li>
+                        <a href="./admin/index.php?page=register">Registrarse</a>
                     </li>
                 </ul>
             </div>
