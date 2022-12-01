@@ -16,6 +16,7 @@
 
     <!-- Custom CSS -->
     <link href="./assets/example/css/thumbnail-gallery.css" rel="stylesheet">
+    <link href="../assets/css/estiloForm.css" rel="stylesheet">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -29,47 +30,42 @@
 <body>
 
     <!-- Navigation -->
-    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-        <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="#">Galeria</a>
-            </div>
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
-                    <li>
-                        <a href="#">Contact</a>
-                    </li>
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container -->
-    </nav>
-
-    <!-- Page Content -->
     
+    <!-- Page Content -->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3"></div>
+            <div class="col-lg-6">
 
-        <hr>
-
-        <!-- Footer -->
-        <footer>
-            <div class="row">
-                <div class="col-lg-12">
-                    <p>Copyright &copy; </p>
+                <div class="form">
+                    <div class="title">Welcome</div>
+                    <div class="subtitle">Let's create your account!</div>
+                    <div class="input-container ic1">
+                        <input id="firstname" class="input" type="text" placeholder=" " />
+                        <div class="cut"></div>
+                        <label for="firstname" class="placeholder">First name</label>
+                    </div>
+                    <div class="input-container ic2">
+                        <input id="lastname" class="input" type="text" placeholder=" " />
+                        <div class="cut"></div>
+                        <label for="lastname" class="placeholder">Last name</label>
+                    </div>
+                    <div class="input-container ic2">
+                        <input id="email" class="input" type="text" placeholder=" " />
+                        <div class="cut cut-short"></div>
+                        <label for="email" class="placeholder">Email</>
+                    </div>
+                    <button type="text" class="submit">submit</button>
                 </div>
+
             </div>
-        </footer>
+            <div class="col-lg-3"></div>
+        </div>
+
 
     </div>
-    <!-- /.container -->
+
+    
 
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
