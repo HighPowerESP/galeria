@@ -1,9 +1,7 @@
 <?php
-
 $config = array(
-
     'database' => array(
-        'host' => 'localhost',
+        'host' => 'db',
         'username' => 'root',
         'password' => 'test',
         'database' => 'GALLERY2',

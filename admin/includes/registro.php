@@ -1,6 +1,6 @@
 <div class="login-box">
   <h2>Registrarse</h2>
-  <form name="register" method="post" action="../actions/registro.act.php">
+  <form name="register" method="post" action="/admin/actions/registro.act.php">
     <div class="user-box">
       <input type="text" name="display_name" required="">
       <label>Usuario</label>
@@ -20,4 +20,3 @@
     <input type="submit" class="boton" value="Registrarse">
   </form>
 </div>
-
