@@ -41,7 +41,7 @@
               <td>'.$row['name'].'</td>
               <td>'.date("d/m/Y H:s:i", strtotime($row['created'])) . '</td>
               <td>'.$enabled.'</td>
-              <td><a href="index.php?page=edit&id='. $row[0].'"><img src="../assets/img/edit2.png" width=20px></a></td>
+              <td><a href="home.php?page=edit&id='. $row[0].'"><img src="../assets/img/edit2.png" width=20px></a></td>
               <td><a href="#" OnClick="delete_post('. $row[0].')"><img src="../assets/img/delete_2.png" width=20px></a></td></tr>'
               
             

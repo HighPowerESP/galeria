@@ -21,28 +21,51 @@ if( $rows_fotos['text'] == 0){
 }
 
 ?>
-
-
-<div class="container">
-
-    <div class="row">
-        <div class="col-lg-12 text-lett">
-            <h2 class="mt-5">Editar foto</h2>
-        </div>
+<div class="login-box">
+  <h2>Nueva Foto</h2>
+  <form name="editPhoto" method="post" action="/admin/actions/edit_foto.act.php" enctype="multipart/form-data">
+    <input type="hidden" name="id" value="<?php echo $rows_fotos['id']; ?>">
+    <div class="user-box">
+      <select name="author_id" id="author_id">
+      <?php
+        foreach ($rows as $row) {
+            if ($row[0] == $rows_fotos['author_id']) {
+              echo "<option value= " . $row[0] . " selected>" . $row[1] ."</option>";
+            } else {
+                echo "<option value= " . $row[0] . ">" . $row[1] ."</option>";
+            }
+          }
+      ?>
+      </select>
+      <label>Autor</label>
     </div>
-
-    <div class="row form_new">
-        <div class="col-lg-2 text-lett"></div>
-        <div class="col-lg-10 text-lett"></div>
-
-            <form role="form" action="actions/edit_foto_act.php">
-
-            
-
-            </form>
-
-    
+    <br>
+    <div class="user-box">
+      <input type="text" name="name" placeholder="" value="<?php echo $rows_fotos['name']; ?>">
+      <label>Nombre</label>
     </div>
-
-
+    <div class="user-box">
+      <label>Fichero</label>
+      <br>
+      <input type="file" name="fichero" id="fichero" placeholder="">
+      <?php echo $rows_fotos['file']; ?>
+    </div>
+    <div class="user-box">
+      <label>Texto</label>
+      <textarea name="text" id="text" cols="22" rows="3">
+      <?php echo $rows_fotos['text']; ?>
+      </textarea>
+    </div>
+    <div class="user-box">
+      <input type="checkbox" name="enabled" <?php echo $enabled; ?>>
+      <label>Activado</label>
+    </div>
+    <a href="#" onclick="document.editPhoto.submit();">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      Editar Foto
+    </a>
+  </form>
 </div>
