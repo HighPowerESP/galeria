@@ -32,7 +32,6 @@
     include "./includes/menu.php";
 
     $page = $_GET['page'];
-
     switch ($page) {
         case 'listado':
             include "./actions/listado.act.php";
@@ -47,7 +46,7 @@
             break;
 
         case 'edit':
-            include "includes/edit_foto.inc.php";
+            include "./includes/edit_foto.inc.php";
             break;
         
     }
