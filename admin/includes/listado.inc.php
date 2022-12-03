@@ -4,6 +4,7 @@ include dirname(dirname(dirname(__FILE__)))."/common/config.php";
 include dirname(dirname(dirname(__FILE__)))."/common/mysql.php";
 
 
+
 $conn = Connect( $config['database']);
 
 $sql = "select * from authors order by name asc";
@@ -13,6 +14,20 @@ $rows = ExecuteQuery( $sql, $conn);
 $conn->close();
 
 ?>
+
+<script>
+
+  function delete_post(id){
+    let ok = confirm("¿Seguro de borrar este autor?");
+    if(!ok){
+      return false;
+    }else{
+      location.href = "/admin/delete.php?page=autores&id=" + id;
+    }
+  }
+
+</script>
+
 <br><br><br><br>
 <div class="container">
 
@@ -37,6 +52,7 @@ $conn->close();
                 </thead>
                 <tbody>
                     <?php
+                    if($rows != null){
                         foreach($rows as $row){
                             if($row['enabled'] == "1"){
                               $enabled = "<img src='../assets/img/activo.png' width=20px";
@@ -56,6 +72,9 @@ $conn->close();
                             );
 
                         }
+                    }else{
+                        echo ("<tr><td colspan='6'>No hay autores</td></tr>");
+                    }
                     ?>
                 </tbody>
             </table>

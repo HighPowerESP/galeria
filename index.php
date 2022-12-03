@@ -1,3 +1,17 @@
+<?php
+
+include "./common/utils.php";
+include "./common/config.php";
+include "./common/mysql.php";
+
+$conn = Connect($config['database']);
+$sql = "SELECT * from images where enabled = 1 order by id desc";
+$rows = ExecuteQuery($sql, $conn);
+$conn->close();
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -58,7 +72,31 @@
     </nav>
 
     <!-- Page Content -->
-    
+        <div class="container">
+            <div class="row">
+                <?php
+                if($rows != null){
+                ?>
+                <div class="col-lg-12">
+                    <h1 class="page-header">Galeria</h1>
+                </div>
+                
+                <?php
+                
+                        foreach($rows as $row){
+                        echo "<div class='col-lg-3 col-md-4 col-xs-6 thumb'>
+                        <a class=thumbnail href='#'>
+                            <img class='img-responsive css_img' src='images/".$row['file']. "' alt=''>
+                        </a>" . $row['name'] . "</div>";
+                    }
+                }else{
+                    print "<h2>No hay imagenes actualmente</h2>";
+                }
+                ?>
+
+
+            </div>
+        </div>
 
         <hr>
 

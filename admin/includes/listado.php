@@ -1,3 +1,16 @@
+<script>
+
+  function delete_post(id){
+    let ok = confirm("¿Seguro de borrar esta imagen?");
+    if(!ok){
+      return false;
+    }else{
+      location.href = "/admin/delete.php?page=listado&id=" + id;
+    }
+  }
+
+</script>
+
 <br>
 <br>
 <br>
@@ -28,6 +41,8 @@
         </thead>
         <tbody>
           <?php
+            
+          if($rows != null){
             foreach($rows as $row){
               if($row['enabled'] == "1"){
                 $enabled = "<img src='../assets/img/activo.png' width=20px";
@@ -46,9 +61,10 @@
               
             
             );
-
-
             }
+          }else{
+            echo ("<tr><td colspan='7'>No hay imagenes</td></tr>");
+          }
           ?>
 
         </tbody>
