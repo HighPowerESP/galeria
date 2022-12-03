@@ -17,12 +17,6 @@
       <input type="checkbox" name="enabled" required="">
       <label>Activo</label>
     </div>
-    <a href="#" onclick="document.register.submit();">
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-      Registrarse
-    </a>
+    <input type="submit" class="boton" value="Registrarse">
   </form>
 </div>
