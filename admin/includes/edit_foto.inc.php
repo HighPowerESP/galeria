@@ -37,7 +37,7 @@ if( $rows_fotos['text'] == 0){
 
             <form role="form" action="actions/edit_foto_act.php">
 
-                
+            
 
             </form>
 
