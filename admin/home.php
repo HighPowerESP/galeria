@@ -35,12 +35,21 @@
 
     switch ($page) {
         case 'listado':
+            include "./actions/listado.act.php";
             include "includes/listado.php";
             break;
-        
+            
+        case 'autores':
+            include "./includes/listado.inc.php";
+
         case 'new':
             include "includes/new_foto.php";
             break;
+
+        case 'edit':
+            include "includes/edit_foto.inc.php";
+            break;
+        
     }
 ?>
     <!-- jQuery -->
