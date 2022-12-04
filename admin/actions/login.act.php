@@ -15,7 +15,7 @@
     $connection = null;
 
     if (empty($result)) {
-      header("location: ../error.php?error=1");
+      header("location: ../index.php?page=login");
     } else {
       session_start();
       $_SESSION['id'] = $result[0]['id'];
