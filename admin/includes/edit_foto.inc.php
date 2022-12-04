@@ -14,7 +14,7 @@ $rows_f = ExecuteQuery( $sql_foto, $conn);
 
 $rows_fotos = $rows_f[0];
 
-if( $rows_fotos['text'] == 0){
+if( $rows_fotos['enabled'] == 0){
     $enabled = 0;
     $e = "";
 }else{
