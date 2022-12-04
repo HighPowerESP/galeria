@@ -1,22 +1,17 @@
 <?php
-
 include dirname(dirname(dirname(__FILE__)))."/common/config.php";
 include dirname(dirname(dirname(__FILE__)))."/common/mysql.php";
 
-
-
-$conn = Connect( $config['database']);
+$conn = Connect($config['database']);
 
 $sql = "select * from authors order by name asc";
 
-$rows = ExecuteQuery( $sql, $conn);
+$rows = ExecuteQuery($sql, $conn);
 
 $conn->close();
 
 ?>
-
 <script>
-
   function delete_post(id){
     let ok = confirm("¿Seguro de borrar este autor?");
     if(!ok){
@@ -25,10 +20,9 @@ $conn->close();
       location.href = "/admin/delete.php?page=autores&id=" + id;
     }
   }
-
 </script>
-
-<br><br><br><br>
+<br>
+<br>
 <div class="container">
 
     <div class="row">
