@@ -22,7 +22,7 @@ if ($_FILES['fichero']['name'] != "") {
   $fichero = $_FILES['fichero']['name'];
   $size = $_FILES['fichero']['size'];
 
-  $sql = "UPDATE images SET author_id = $author_id, name = '$name', text = '$text', file = $fichero, size = $size, enabled = $enabled WHERE id = $id";
+  $sql = "UPDATE images SET author_id = $author_id, name = '$name', text = '$text', file = $fichero, size = $size, enabled = '$enabled' WHERE id = $id";
 } else {
   $sql = "UPDATE images SET author_id = $author_id, name = '$name', text = '$text', enabled = $enabled WHERE id = $id";
 }

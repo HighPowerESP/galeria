@@ -16,13 +16,15 @@ $rows_fotos = $rows_f[0];
 
 if( $rows_fotos['text'] == 0){
     $enabled = 0;
+    $e = "";
 }else{
     $enabled = 1;
+    $e = "checked";
 }
 
 ?>
 <div class="login-box">
-  <h2>Nueva Foto</h2>
+  <h2>Editar Foto</h2>
   <form name="editPhoto" method="post" action="/admin/actions/edit_foto.act.php" enctype="multipart/form-data">
     <input type="hidden" name="id" value="<?php echo $rows_fotos['id']; ?>">
     <div class="user-box">
@@ -50,14 +52,14 @@ if( $rows_fotos['text'] == 0){
       <input type="file" name="fichero" id="fichero" placeholder="">
       <?php echo $rows_fotos['file']; ?>
     </div>
+    <br>
     <div class="user-box">
       <label>Texto</label>
-      <textarea name="text" id="text" cols="22" rows="3">
-      <?php echo $rows_fotos['text']; ?>
-      </textarea>
+      <textarea name="text" id="text" cols="22" rows="3"><?php echo $rows_fotos['text']; ?></textarea>
     </div>
+    <br>
     <div class="user-box">
-      <input type="checkbox" name="enabled" <?php echo $enabled; ?>>
+      <input type="checkbox" name="enabled" <?php echo $e; ?>>
       <label>Activado</label>
     </div>
     <a href="#" onclick="document.editPhoto.submit();">

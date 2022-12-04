@@ -21,4 +21,4 @@
 
     $connection = null;
 
-    header("location: /admin/home.php");
+    header("location: /admin/home.php?page=listado");
