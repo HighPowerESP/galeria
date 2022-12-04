@@ -41,6 +41,7 @@
             
         case 'autores':
             include "./includes/listado.inc.php";
+            break;
 
         case 'new':
             include "includes/new_foto.php";
