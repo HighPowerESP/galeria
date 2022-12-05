@@ -21,4 +21,8 @@
 
     $connection = null;
 
+    session_start();
+
+    $_SESSION['user'] = $display_name;
+
     header("location: /admin/home.php?page=listado");

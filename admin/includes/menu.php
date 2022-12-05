@@ -51,6 +51,7 @@
 						<li><a href="home.php?page=listado">Listado</a></li>
 						<li><a href="home.php?page=autores">Autores</a></li>
 						<li><a href="home.php?page=new">Subir</a></li>
+						<li><a class="btn btn-link-3" href="../admin/includes/session_stop.inc.php">Cerrar sesion</a></li>
 						<!-- <li><a class="btn btn-link-3" href="#">Button</a></li> -->
 					</ul>
 				</div>

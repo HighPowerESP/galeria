@@ -19,6 +19,7 @@
     } else {
       session_start();
       $_SESSION['id'] = $result[0]['id'];
+      $_SESSION['user'] = $username;
       $_SESSION['email'] = $result[0]['email'];
       $_SESSION['session_id'] = session_id();
 
